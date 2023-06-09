@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <script type="module">
+      import hotwiredturbo from "https://cdn.jsdelivr.net/npm/@hotwired/turbo@7.3.0/+esm";
+    </script>
+  </head>
+  <body>
+    <button
+      onclick="document.getElementById('frame').src = window.location.href"
+    >
+      Click this button to crash your Chrome.
+    </button>
+    <turbo-frame id="frame">
+      <!-- change the word "location" to anything else and the crash will no longer occur -->
+      <form name="location"></form>
+    </turbo-frame>
+  </body>
+</html>
